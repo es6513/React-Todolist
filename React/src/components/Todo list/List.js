@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Task from './Task';
+import React, { Component } from "react";
+import Task from "./Task";
 
 class List extends Component{
 	constructor(props){
@@ -28,7 +28,7 @@ class List extends Component{
 			<div className='List'>
 				
 				{this.props.todos.map((todo,index) =>{
-					if(showState=='done' && todo.done==true){
+					if(showState=="done" && todo.done==true){
 						return(
 							<Task 
 								key={todo.key}
@@ -38,7 +38,7 @@ class List extends Component{
 								todo={todo}	
 							/>
 						);
-					}else if(showState=='undo' && todo.done==false){
+					}else if(showState=="undo" && todo.done==false){
 						return(
 							<Task 
 								key={todo.key}
@@ -48,7 +48,7 @@ class List extends Component{
 								todo={todo}	
 							/>
 						);
-					}else if(showState==''){
+					}else if(showState==""){
 						return(
 							<Task 
 								key={todo.key}
